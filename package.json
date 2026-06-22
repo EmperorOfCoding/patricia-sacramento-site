@@ -1,0 +1,25 @@
+{
+  "name": "patricia-sacramento-site",
+  "version": "1.0.0",
+  "description": "Landing page de Patrícia Sacramento | Advocacia e Consultoria, advocacia de família, sucessões e planejamento patrimonial em Salvador - BA. Conversão ética via WhatsApp.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "node prerender.mjs",
+    "preview": "vite preview"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "framer-motion": "^11.3.0",
+    "lucide-react": "^0.460.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "vite": "^5.4.8"
+  }
+}

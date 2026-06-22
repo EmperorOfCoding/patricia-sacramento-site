@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-ivory text-ink font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Foco visivel e acessivel em todos os elementos interativos */
+  :focus-visible {
+    outline: 2px solid theme('colors.champagne.dark');
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: theme('colors.champagne.DEFAULT');
+    color: theme('colors.mogno.900');
+  }
+
+  h1, h2, h3 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  /* Rotulo superior (kicker) com regua dourada */
+  .kicker {
+    @apply inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-widee text-champagne-dark;
+  }
+  .kicker::before {
+    content: '';
+    @apply inline-block h-px w-8 bg-champagne;
+  }
+
+  /* Botao primario: solido mogno com brilho dourado discreto */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full bg-mogno-700 px-7 py-3.5
+           text-sm font-semibold tracking-wide text-ivory-50 shadow-soft
+           transition-all duration-300 hover:bg-mogno-800 hover:-translate-y-0.5 hover:shadow-card;
+  }
+
+  /* Botao secundario: contorno sobrio */
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full border border-mogno-300/60
+           px-7 py-3.5 text-sm font-semibold tracking-wide text-mogno-700
+           transition-all duration-300 hover:border-mogno-600 hover:bg-mogno-50/60;
+  }
+
+  /* Botao WhatsApp */
+  .btn-whats {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full bg-mogno-700 px-7 py-3.5
+           text-sm font-semibold tracking-wide text-ivory-50 shadow-soft
+           transition-all duration-300 hover:bg-mogno-800 hover:-translate-y-0.5 hover:shadow-card;
+  }
+
+  .section {
+    @apply px-6 sm:px-8 lg:px-10;
+  }
+
+  .container-x {
+    @apply mx-auto w-full max-w-6xl;
+  }
+
+  /* Texto de corpo com leitura confortavel */
+  .lede {
+    @apply text-lg leading-relaxed text-mogno-600/90;
+  }
+
+  /* Linha decorativa dourada fina */
+  .gold-line {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-champagne to-transparent;
+  }
+}
+
+/* Respeita usuarios que preferem menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
