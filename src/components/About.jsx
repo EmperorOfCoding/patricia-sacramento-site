@@ -27,15 +27,18 @@ export default function About() {
         >
           <div className="absolute -bottom-4 -left-4 right-8 top-8 rounded-[2rem] bg-mogno-100/50" aria-hidden="true" />
           <div className="relative overflow-hidden rounded-[2rem] shadow-card ring-1 ring-mogno-900/5">
-            <img
-              src="/img/sobre_a_profissional.png"
-              width="799"
-              height="760"
-              loading="lazy"
-              decoding="async"
-              alt="Patrícia Sacramento, advogada, em seu escritório em Salvador."
-              className="h-full w-full object-cover"
-            />
+            <picture>
+              <source srcSet="/img/sobre_a_profissional.webp" type="image/webp" />
+              <img
+                src="/img/sobre_a_profissional.jpg"
+                width="1127"
+                height="1395"
+                loading="lazy"
+                decoding="async"
+                alt="Patrícia Sacramento, advogada, em seu escritório em Salvador."
+                className="h-full w-full object-cover"
+              />
+            </picture>
           </div>
         </motion.div>
 
