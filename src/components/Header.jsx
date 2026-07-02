@@ -32,13 +32,20 @@ export default function Header() {
       }`}
     >
       <div className="container-x section flex h-[68px] items-center justify-between">
-        <a href="#inicio" className="group flex flex-col leading-none" aria-label="Início">
-          <span className="font-display text-xl font-semibold tracking-tight text-ink">
-            Patrícia Sacramento
-          </span>
-          <span className="mt-0.5 text-[0.62rem] font-medium uppercase tracking-widee text-champagne-dark">
-            {ADVOGADA.role}
-          </span>
+        <a href="#inicio" className="group flex items-center gap-3" aria-label="Início">
+          <img
+            src="/img/patricia-logo-Photoroom.png"
+            alt="Logo Patrícia Sacramento"
+            className={`h-12 w-auto object-contain transition-all duration-300 sm:h-14 ${scrolled ? 'brightness-0 opacity-80' : 'brightness-0 invert'}`}
+          />
+          <div className="flex flex-col leading-none">
+            <span className={`font-display text-xl font-semibold tracking-tight transition-colors duration-300 ${scrolled ? 'text-ink' : 'text-white'}`}>
+              Patrícia Sacramento
+            </span>
+            <span className={`mt-0.5 text-[0.62rem] font-medium uppercase tracking-wide transition-colors duration-300 ${scrolled ? 'text-champagne-dark' : 'text-champagne-light'}`}>
+              {ADVOGADA.role}
+            </span>
+          </div>
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Navegação principal">
@@ -46,9 +53,9 @@ export default function Header() {
             <a
               key={l.href}
               href={l.href}
-              className="relative text-sm font-medium text-mogno-600 transition-colors hover:text-ink
-                         after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-champagne
-                         after:transition-all after:duration-300 hover:after:w-full"
+              className={`relative text-sm font-medium transition-colors ${
+                scrolled ? 'text-mogno-600 hover:text-ink' : 'text-ivory-200 hover:text-white'
+              } after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-champagne after:transition-all after:duration-300 hover:after:w-full`}
             >
               {l.label}
             </a>
@@ -61,16 +68,18 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={onWhats}
-            className="hidden btn-primary !px-5 !py-2.5 sm:inline-flex"
+            className={`hidden !px-5 !py-2.5 sm:inline-flex ${
+              scrolled ? 'btn-primary' : 'btn-gold'
+            }`}
           >
             <WhatsAppIcon className="h-4 w-4" />
-            Falar com a equipe
+            Falar com a Dra. Patrícia
           </a>
 
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full text-ink lg:hidden"
+            className={`inline-flex h-10 w-10 items-center justify-center rounded-full lg:hidden transition-colors ${scrolled ? 'text-ink' : 'text-white'}`}
             aria-label={open ? 'Fechar menu' : 'Abrir menu'}
             aria-expanded={open}
           >
@@ -101,7 +110,7 @@ export default function Header() {
               className="btn-primary mt-3 w-full"
             >
               <WhatsAppIcon className="h-4 w-4" />
-              Falar com a equipe
+              Falar com a Dra. Patrícia
             </a>
           </nav>
         </div>

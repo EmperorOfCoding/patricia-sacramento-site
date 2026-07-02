@@ -17,14 +17,13 @@ export default function ConversionQuiz() {
         </Reveal>
         <Reveal>
           <h2 className="mx-auto mt-5 max-w-2xl font-display text-3xl font-medium leading-[1.12] text-ivory-50 sm:text-4xl">
-            Escolha o tema mais próximo do seu caso e fale diretamente pelo
-            WhatsApp.
+            Escolha o tema mais próximo e envie uma mensagem já direcionada.
           </h2>
         </Reveal>
         <Reveal>
           <p className="mx-auto mt-5 max-w-xl text-ivory-200/75">
-            Cada opção abre uma conversa com uma mensagem inicial pronta. Você
-            ajusta como preferir antes de enviar.
+            Isso reduz o esforço do primeiro contato. Você pode ajustar o texto
+            antes de enviar e não precisa anexar documentos agora.
           </p>
         </Reveal>
 

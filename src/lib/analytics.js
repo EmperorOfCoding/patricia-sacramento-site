@@ -10,7 +10,6 @@ export function track(event, params = {}) {
 
 export const Events = {
   whatsappClick: (term) => track('whatsapp_click', { cta_origin: term }),
-  formSubmit: (tema) => track('form_submit', { form_tema: tema }),
   instagramClick: () => track('instagram_click'),
   scroll75: () => track('scroll_75'),
   practiceAreaClick: (area) => track('practice_area_click', { area }),

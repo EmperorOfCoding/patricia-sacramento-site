@@ -41,7 +41,7 @@ const UTM = {
 
 // Monta um link wa.me com mensagem pre-preenchida e UTM por origem (term).
 export function whatsappLink(
-  message = 'Olá, Dra. Patrícia. Vim pelo site e gostaria de entender qual o melhor caminho jurídico para minha situação.',
+  message = 'Olá, Dra. Patrícia. Vim pelo site. Gostaria de explicar brevemente minha situação e entender quais informações devo reunir antes de decidir os próximos passos.',
   term = 'geral'
 ) {
   const params = new URLSearchParams({ ...UTM, utm_term: term });
@@ -52,7 +52,7 @@ export function whatsappLink(
 
 // Mensagem padrao do botao principal do header / CTAs gerais.
 export const WHATS_DEFAULT =
-  'Olá, Dra. Patrícia. Vim pelo site e gostaria de entender qual o melhor caminho jurídico para minha situação.';
+  'Olá, Dra. Patrícia. Vim pelo site. Gostaria de explicar brevemente minha situação e entender quais informações devo reunir antes de decidir os próximos passos.';
 
 // Mensagens personalizadas por situacao (bloco de conversao).
 export const SITUACOES = [
@@ -60,37 +60,37 @@ export const SITUACOES = [
     id: 'divorcio',
     label: 'Divórcio',
     message:
-      'Olá, Dra. Patrícia. Vim pelo site e gostaria de entender os próximos passos em uma situação de divórcio.',
+      'Olá, Dra. Patrícia. Vim pelo site. Estou passando por uma situação de divórcio e gostaria de entender quais informações devo reunir antes de decidir os próximos passos.',
   },
   {
     id: 'inventario',
     label: 'Inventário',
     message:
-      'Olá, Dra. Patrícia. Vim pelo site e gostaria de orientação sobre inventário.',
+      'Olá, Dra. Patrícia. Vim pelo site. Preciso lidar com um inventário e gostaria de entender quais documentos e caminhos podem ser avaliados.',
   },
   {
     id: 'planejamento',
     label: 'Planejamento patrimonial',
     message:
-      'Olá, Dra. Patrícia. Vim pelo site e gostaria de entender como organizar meu patrimônio com segurança jurídica.',
+      'Olá, Dra. Patrícia. Vim pelo site. Gostaria de entender como organizar questões patrimoniais em vida e quais cuidados jurídicos devo avaliar.',
   },
   {
     id: 'doacao',
     label: 'Doação / Testamento',
     message:
-      'Olá, Dra. Patrícia. Vim pelo site e gostaria de orientação sobre doação ou testamento.',
+      'Olá, Dra. Patrícia. Vim pelo site. Tenho dúvidas sobre doação ou testamento e gostaria de entender os cuidados jurídicos antes de decidir.',
   },
   {
     id: 'outro',
     label: 'Outro assunto familiar',
     message:
-      'Olá, Dra. Patrícia. Vim pelo site e gostaria de orientação jurídica em uma situação familiar/patrimonial.',
+      'Olá, Dra. Patrícia. Vim pelo site. Tenho uma situação familiar ou patrimonial e gostaria de entender qual seria o primeiro passo com segurança.',
   },
 ];
 
 // Links de navegacao do header (ancoras das secoes).
 export const NAV_LINKS = [
-  { label: 'Atuação', href: '#atuacao' },
+  { label: 'Nossos Serviços', href: '#atuacao' },
   { label: 'Como funciona', href: '#como-funciona' },
   { label: 'Sobre', href: '#sobre' },
   { label: 'Dúvidas', href: '#duvidas' },

@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 import SectionHeading from './SectionHeading.jsx';
 import Reveal from './Reveal.jsx';
 import { stagger, fadeUp, inView } from '../lib/motion.js';
+import { whatsappLink, WHATS_DEFAULT } from '../lib/site.js';
+import { Events } from '../lib/analytics.js';
+import { WhatsAppIcon } from './icons.jsx';
 
 const SITUACOES = [
   'Estou me separando e preciso entender meus direitos e deveres.',
@@ -17,15 +20,15 @@ export default function PainSection() {
     <section className="section py-20 sm:py-28">
       <div className="container-x">
         <SectionHeading kicker="Por onde começar">
-          Decisões familiares e patrimoniais exigem clareza antes de qualquer
-          passo.
+          Decisões familiares e patrimoniais ficam mais seguras quando você
+          entende os riscos antes de agir.
         </SectionHeading>
         <Reveal>
           <p className="mt-5 max-w-2xl lede">
             Divórcio, inventário e planejamento patrimonial envolvem bens,
-            vínculos familiares, documentos, prazos, riscos e consequências
-            jurídicas. O papel da advocacia é ajudar você a compreender as
-            possibilidades, os riscos e os caminhos adequados para o seu caso.
+            vínculos familiares, documentos, prazos e consequências jurídicas.
+            Antes de assinar, adiar ou decidir sozinho, vale compreender o que
+            pode mudar no seu caso.
           </p>
         </Reveal>
 
@@ -53,6 +56,26 @@ export default function PainSection() {
             </motion.li>
           ))}
         </motion.ul>
+
+        <Reveal>
+          <div className="mt-10 flex flex-col items-start gap-3 rounded-2xl border border-mogno-200/50 bg-ivory-50 p-6 shadow-soft sm:flex-row sm:items-center sm:justify-between">
+            <p className="max-w-2xl text-[0.98rem] leading-relaxed text-mogno-700">
+              Você não precisa saber o caminho jurídico exato antes de entrar em
+              contato. Comece com uma mensagem breve e entenda quais informações
+              reunir.
+            </p>
+            <a
+              href={whatsappLink(WHATS_DEFAULT, 'situacoes')}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => Events.whatsappClick('situacoes')}
+              className="btn-primary shrink-0"
+            >
+              <WhatsAppIcon className="h-4 w-4" />
+              Entender meu próximo passo
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

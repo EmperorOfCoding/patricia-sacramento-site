@@ -33,7 +33,7 @@ export const FAQ_ITEMS = [
   },
   {
     q: 'Como funciona o primeiro contato?',
-    a: 'Você descreve brevemente a situação que precisa organizar. A partir disso, a equipe compreende o contexto e indica quais informações são necessárias para orientar os próximos passos.',
+    a: 'Você descreve brevemente a situação que precisa organizar. A partir disso, o contexto é compreendido e são indicadas quais informações são necessárias para orientar os próximos passos.',
   },
 ];
 
@@ -105,7 +105,7 @@ export default function FAQ() {
                 onClick={() => Events.whatsappClick('faq')}
                 className="font-semibold text-mogno-700 underline decoration-champagne underline-offset-4"
               >
-                Tem outra dúvida? Fale com a equipe.
+                Tem outra dúvida? Fale com a Dra. Patrícia.
               </a>
             </p>
           </Reveal>

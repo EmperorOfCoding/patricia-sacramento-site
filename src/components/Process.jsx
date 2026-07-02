@@ -1,28 +1,27 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import SectionHeading from './SectionHeading.jsx';
+import Reveal from './Reveal.jsx';
 import { stagger, fadeUp, inView } from '../lib/motion.js';
+import { whatsappLink, WHATS_DEFAULT } from '../lib/site.js';
+import { Events } from '../lib/analytics.js';
+import { WhatsAppIcon } from './icons.jsx';
 
 const ETAPAS = [
   {
     n: '01',
-    title: 'Primeiro contato',
-    text: 'Você informa, de forma breve, qual situação precisa organizar.',
+    title: 'Comece com pouco',
+    text: 'Você envia uma mensagem breve pelo WhatsApp, sem anexar documentos ou expor detalhes sensíveis no primeiro contato.',
   },
   {
     n: '02',
-    title: 'Análise inicial',
-    text: 'A equipe compreende o contexto e identifica quais informações são necessárias.',
+    title: 'Entenda o que reunir',
+    text: 'A conversa inicial ajuda a identificar quais informações e documentos podem ser relevantes para análise.',
   },
   {
     n: '03',
-    title: 'Orientação jurídica',
-    text: 'Você recebe explicações sobre caminhos possíveis, documentos e riscos envolvidos.',
-  },
-  {
-    n: '04',
-    title: 'Condução estratégica',
-    text: 'O caso é acompanhado com clareza, responsabilidade e comunicação objetiva.',
+    title: 'Decida com mais clareza',
+    text: 'Com riscos, alternativas e limites mais claros, você avalia o melhor próximo passo para a sua situação.',
   },
 ];
 
@@ -31,7 +30,7 @@ export default function Process() {
     <section id="como-funciona" className="section py-20 sm:py-28">
       <div className="container-x">
         <SectionHeading kicker="Como funciona o atendimento" center>
-          Um processo simples, do primeiro contato à condução do caso.
+          O primeiro contato foi pensado para reduzir fricção, não para expor sua vida inteira.
         </SectionHeading>
 
         <motion.ol
@@ -39,9 +38,8 @@ export default function Process() {
           initial="hidden"
           whileInView="show"
           viewport={inView}
-          className="relative mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6"
+          className="relative mt-16 grid gap-10 sm:grid-cols-3 lg:gap-8"
         >
-          {/* Linha conectora (desktop) */}
           <span
             className="pointer-events-none absolute left-0 right-0 top-7 hidden h-px bg-gradient-to-r from-transparent via-champagne/50 to-transparent lg:block"
             aria-hidden="true"
@@ -56,6 +54,21 @@ export default function Process() {
             </motion.li>
           ))}
         </motion.ol>
+
+        <Reveal>
+          <div className="mt-12 text-center">
+            <a
+              href={whatsappLink(WHATS_DEFAULT, 'processo')}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => Events.whatsappClick('processo')}
+              className="btn-primary"
+            >
+              <WhatsAppIcon className="h-4 w-4" />
+              Começar com uma mensagem breve
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

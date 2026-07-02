@@ -13,11 +13,11 @@ export default function Footer() {
         <Reveal className="container-x py-16 text-center sm:py-20">
           <span className="kicker text-champagne-light">Próximo passo</span>
           <h2 className="mx-auto mt-5 max-w-2xl font-display text-3xl font-medium leading-[1.12] text-ivory-50 sm:text-4xl">
-            Organize sua situação familiar ou patrimonial com mais clareza.
+            Evite decidir no escuro sobre família, patrimônio ou sucessão.
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-ivory-200/75">
-            Entre em contato para compreender quais caminhos jurídicos podem ser
-            avaliados para o seu caso.
+            Envie uma mensagem breve pelo WhatsApp para entender quais
+            informações reunir e quais caminhos podem ser avaliados.
           </p>
           <a
             href={whatsappLink(WHATS_DEFAULT, 'cta-final')}
@@ -27,7 +27,7 @@ export default function Footer() {
             className="mt-8 inline-flex items-center justify-center gap-2.5 rounded-full bg-champagne px-8 py-4 text-sm font-semibold tracking-wide text-mogno-900 transition-all duration-300 hover:bg-champagne-light hover:-translate-y-0.5"
           >
             <WhatsAppIcon className="h-4 w-4" />
-            Falar com a equipe
+            Entender próximos passos
           </a>
         </Reveal>
       </div>

@@ -54,6 +54,13 @@
            transition-all duration-300 hover:border-mogno-600 hover:bg-mogno-50/60;
   }
 
+  /* Botao dourado solido: CTA de destaque sobre fundos escuros */
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full bg-champagne px-7 py-3.5
+           text-sm font-semibold tracking-wide text-mogno-900 shadow-gold
+           transition-all duration-300 hover:bg-champagne-light hover:-translate-y-0.5;
+  }
+
   /* Botao WhatsApp */
   .btn-whats {
     @apply inline-flex items-center justify-center gap-2.5 rounded-full bg-mogno-700 px-7 py-3.5

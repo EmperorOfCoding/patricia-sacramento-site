@@ -1,7 +1,7 @@
 # Site — Patrícia Sacramento | Advocacia e Consultoria
 
 Landing page de conversão para advocacia de família, sucessões e planejamento
-patrimonial em Salvador/BA. Foco em conversão ética via WhatsApp e formulário.
+patrimonial em Salvador/BA. Foco em conversão ética via WhatsApp.
 
 ## Stack
 
@@ -24,7 +24,7 @@ npm run preview  # serve o dist/ (http://localhost:4173)
   contato/links em todo o site.
 - `src/lib/motion.js` — variantes de animação (fadeUp, stagger, parallax).
 - `src/lib/analytics.js` — eventos de conversão para o Google Tag Manager
-  (dataLayer): `whatsapp_click`, `form_submit`, `instagram_click`, `scroll_75`,
+  (dataLayer): `whatsapp_click`, `instagram_click`, `scroll_75` e
   `practice_area_click`.
 - `src/components/` — uma seção por componente: Header, Hero, TrustBar,
   PainSection, PracticeAreas, Process, About, Education, ConversionQuiz, FAQ,
