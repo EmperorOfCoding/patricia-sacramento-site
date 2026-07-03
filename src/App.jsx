@@ -37,7 +37,7 @@ export default function App() {
     // reducedMotion="user" respeita prefers-reduced-motion: mantem fades de
     // opacidade e desativa movimento, garantindo que nada fique invisivel.
     <MotionConfig reducedMotion="user">
-      <div className="min-h-dvh bg-ivory bg-grain">
+      <div className="min-h-dvh overflow-x-hidden bg-ivory bg-grain">
         <Header />
         <main>
           <Hero />
