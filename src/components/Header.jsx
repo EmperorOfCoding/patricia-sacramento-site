@@ -8,6 +8,8 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
+  const isSolid = scrolled || open;
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
@@ -26,7 +28,7 @@ export default function Header() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled
+        isSolid
           ? 'border-b border-mogno-200/40 bg-ivory-50/90 backdrop-blur-md'
           : 'bg-transparent'
       }`}
@@ -36,13 +38,13 @@ export default function Header() {
           <img
             src="/img/patricia-logo-Photoroom.png"
             alt="Logo Patrícia Sacramento"
-            className={`h-12 w-auto object-contain transition-all duration-300 sm:h-14 ${scrolled ? 'brightness-0 opacity-80' : 'brightness-0 invert'}`}
+            className={`h-12 w-auto object-contain transition-all duration-300 sm:h-14 ${isSolid ? 'brightness-0 opacity-80' : 'brightness-0 invert'}`}
           />
           <div className="flex flex-col leading-none">
-            <span className={`font-display text-xl font-semibold tracking-tight transition-colors duration-300 ${scrolled ? 'text-ink' : 'text-white'}`}>
+            <span className={`font-display text-xl font-semibold tracking-tight transition-colors duration-300 ${isSolid ? 'text-ink' : 'text-white'}`}>
               Patrícia Sacramento
             </span>
-            <span className={`mt-0.5 text-[0.62rem] font-medium uppercase tracking-wide transition-colors duration-300 ${scrolled ? 'text-champagne-dark' : 'text-champagne-light'}`}>
+            <span className={`mt-0.5 text-[0.62rem] font-medium uppercase tracking-wide transition-colors duration-300 ${isSolid ? 'text-champagne-dark' : 'text-champagne-light'}`}>
               {ADVOGADA.role}
             </span>
           </div>
@@ -54,7 +56,7 @@ export default function Header() {
               key={l.href}
               href={l.href}
               className={`relative text-sm font-medium transition-colors ${
-                scrolled ? 'text-mogno-600 hover:text-ink' : 'text-ivory-200 hover:text-white'
+                isSolid ? 'text-mogno-600 hover:text-ink' : 'text-ivory-200 hover:text-white'
               } after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-champagne after:transition-all after:duration-300 hover:after:w-full`}
             >
               {l.label}
@@ -69,7 +71,7 @@ export default function Header() {
             rel="noopener noreferrer"
             onClick={onWhats}
             className={`hidden !px-5 !py-2.5 sm:inline-flex ${
-              scrolled ? 'btn-primary' : 'btn-gold'
+              isSolid ? 'btn-primary' : 'btn-gold'
             }`}
           >
             <WhatsAppIcon className="h-4 w-4" />
@@ -79,7 +81,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className={`inline-flex h-10 w-10 items-center justify-center rounded-full lg:hidden transition-colors ${scrolled ? 'text-ink' : 'text-white'}`}
+            className={`inline-flex h-10 w-10 items-center justify-center rounded-full lg:hidden transition-colors ${isSolid ? 'text-ink' : 'text-white'}`}
             aria-label={open ? 'Fechar menu' : 'Abrir menu'}
             aria-expanded={open}
           >

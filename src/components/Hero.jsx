@@ -137,7 +137,7 @@ export default function Hero() {
 
             <motion.div
               variants={item}
-              className="mt-6 grid gap-3 text-sm text-ivory-200/78 sm:grid-cols-3"
+              className="mt-6 grid gap-3 text-sm text-white sm:grid-cols-3"
             >
               <span className="flex items-center gap-2">
                 <ShieldCheck className="h-4 w-4 text-champagne-light" strokeWidth={1.8} />
