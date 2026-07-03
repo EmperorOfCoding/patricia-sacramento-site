@@ -130,7 +130,7 @@ export default function Hero() {
               </motion.a>
             </motion.div>
 
-            <motion.p variants={item} className="mt-3 max-w-lg text-sm leading-relaxed text-white">
+            <motion.p variants={item} className="hidden mt-3 max-w-lg text-sm leading-relaxed text-white sm:block">
               Primeiro contato sem envio imediato de documentos. Uma
               descrição breve já ajuda a orientar a conversa inicial.
             </motion.p>
